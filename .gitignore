@@ -1,0 +1,20 @@
+target
+*.swp
+*.swo
+*.class
+.idea/
+*.iml
+*.resources.prefs
+
+# Package Files #
+*.jar
+
+### Gradle template
+.gradle
+/build
+/out
+*/build/
+*/out
+
+# OS X
+.DS_Store

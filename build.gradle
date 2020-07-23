@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.amuyu'
+version '0.9.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext.versions = [
+        "fabricSdk": "1.4.4",
+        "logback"  : "1.2.3",
+        "lombok"   : "1.18.12",
+        "protobuf" : "3.11.0",
+        "jackson"  : "2.10.0",
+        "caffeine" : "2.8.1",
+        "jakarta"  : "2.3.3"
+]
+
+dependencies {
+    implementation("org.hyperledger.fabric-sdk-java:fabric-sdk-java:${versions.fabricSdk}")
+    implementation("ch.qos.logback:logback-classic:${versions.logback}")
+    implementation("org.projectlombok:lombok:${versions.lombok}")
+    annotationProcessor "org.projectlombok:lombok:${versions.lombok}"
+    implementation("com.google.protobuf:protobuf-java:${versions.protobuf}")
+    implementation("com.fasterxml.jackson.core:jackson-databind:${versions.jackson}")
+    implementation("com.github.ben-manes.caffeine:caffeine:${versions.caffeine}")
+    implementation("jakarta.xml.bind:jakarta.xml.bind-api:${versions.jakarta}")
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
