@@ -10,7 +10,7 @@ public class Config {
     public static String tlsFolder = "./tls";
 
     public static String caName = "ca-org1";
-    public static String caUrl = "https://localhsst:7054";
+    public static String caUrl = "https://localhost:7054";
     public static String caPemFile = "ca-org1.pem";
     public static String caPemFilePath = Config.tlsFolder + File.separator  + Config.caPemFile;
 
